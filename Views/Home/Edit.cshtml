@@ -1,0 +1,36 @@
+﻿@model Movie
+
+
+@{
+    ViewData["Title"] = "Edit Movie";
+}
+
+<h1>Edit a Movie</h1>
+
+<form method="post">
+    <label asp-for="Id">Id</label>
+    <input asp-for="Id" />
+    <br />
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title" />
+    <br />
+    <label asp-for="Year">Year</label>
+    <input asp-for="Year" min="1888" />
+    <br />
+    <label asp-for="Edited">Edited</label>
+    <select asp-for="Edited">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+    <label asp-for="CopiedToPlex">Copied To Plex</label>
+    <select asp-for="CopiedToPlex">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+
+    <button type="submit">Submit</button>
+</form>
+
+<a asp-action="Movie">Back to List</a>
